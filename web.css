@@ -1,9 +1,72 @@
 #myVideo {
-    position: fixed;
+      position: absolute;
+      height: 100vh;
       top: 0; left: 0; right: 0; bottom: 0;
-      width: 100%; height: 100%;
+      width: 100%;
       object-fit: cover;
       z-index: -1;
+  }
+#myVideo2 {
+    position: absolute;
+    height: 100vh;
+    top: 100vh; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+#myVideo3 {
+    position: absolute;
+    height: 100vh;
+    top: 300vh; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    object-fit:fill;
+    z-index: -1;
+}
+#myVideo4 {
+    position: absolute;
+    height: 100vh;
+    top: 400vh; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    object-fit:fill;
+    z-index: -1;
+}
+
+#glcanvas {
+    top: 200vh;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
+    pointer-events: auto;
+  }
+  
+  #controlPanel {
+    position: absolute;
+    top: 200vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: fit-content;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-family: sans-serif;
+    
+  }
+  
+  #controlPanel input[type="range"] {
+    width: 100px;
+    
+  }
+
+  #projects {
+    position: relative;          /* Normal positioning */
+    z-index: 1;                  /* Above the canvas */
+    pointer-events: none;        /* Allow clicks to pass through */
   }
 
 body {
@@ -12,9 +75,24 @@ body {
     margin: 0;
     text-align: center;
     padding: 0;
+    z-index: 1;
     }
 
 h2 {
+    font-size: 120px;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    color: rgba(255, 255, 255, 0.7); /* Semi-transparent fill */
+    -webkit-text-stroke: 3px white;  /* Solid border */
+    z-index: 1000;
+    
+}
+
+h1 {
     font-size: 120px;
     font-family: "EB Garamond", serif;
     font-optical-sizing: auto;
@@ -24,6 +102,7 @@ h2 {
     margin-bottom: 0px;
     color: rgba(255, 255, 255, 0.7); /* Semi-transparent fill */
     -webkit-text-stroke: 3px white;  /* Solid border */
+    z-index: 1000;
     
 }
 
@@ -33,6 +112,21 @@ h5 {
     margin-top: 0px;
 
 }
+
+h4 {
+    font-size: 120px;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.7); /* Semi-transparent fill */
+    -webkit-text-stroke: 3px white;  /* Solid border */
+    z-index: 1000;
+    line-height: 1;
+    margin:0;
+    padding:0;
+    
+} 
 
 section {
     height: 100vh;
@@ -55,6 +149,61 @@ a {
     text-decoration-line: none;
 }
 
+.About{
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    width: 800px;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.project-grid {
+    
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+.project-card{
+    border: 1px solid white;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.3);
+    
+}
+
+.icon-container {
+    
+    gap: 10px;
+    flex-wrap: wrap;
+
+}
+
+.icon-box {
+    height: 60px; width: 60px;
+    background-color: rgba(255, 255, 255, 0.3); 
+    border: 1px solid white;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icon-box:hover {
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    height: 65px; width: 65px;
+    transition: ease 100ms;
+}
+
 .hamburger {
     position: fixed;
     top: 20px;
@@ -72,7 +221,7 @@ a {
     width: 100%;
     height: 4px;
     background-color: black;
-    transition: 0.3s ease;
+    transition: right 0.3s ease;
   }
   
   .hamburger.active .bar:nth-child(1) {
@@ -112,3 +261,58 @@ a {
     text-decoration: none;
     padding: 10px 20px;
   }
+#contact {
+    height: 420px;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto;
+  }
+  
+  .row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .input-field.small {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 0;
+  }
+  
+  .input-field.large {
+    flex: 3;
+    margin-top: 0;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+  }
+  
+  .submit-btn {
+    margin-top: 0px;
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+#footer {
+    height: 0px;
+}
