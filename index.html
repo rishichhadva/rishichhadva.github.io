@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rishi Shah - Portfolio</title>
-    <link rel="stylesheet" href="web.css"> 
+    <link rel="stylesheet" href="styles.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lilita+One&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
 </head>
 <body >
     <video autoplay muted loop id="myVideo">
         <source src="dummy1.mp4" type="video/mp4">
     </video>
+    
+    
 <div class="content">
     <!-- Navigation -->
     <div class="hamburger" id="hamburger">
@@ -36,21 +38,30 @@
     <!-- Hero Section -->
     <section id="hero">
         <div class="container" style= "padding: 40px 0px 0px 0px;" >
-                <h2>Hi, I'm Rishi Shah!</h2>
+                <h1>Hi, I'm Rishi Shah!</h1>
                 <h5>Creativity is my Craft.</h5>
                 <button ><a href="#contact" class="cta"><b>Get in Touch</b></a></button>
                 <button href=""class="cv"><b>Download My CV</b></button>
         </div>
     </section>
 
+    <video autoplay muted loop id="myVideo2">
+        <source src="dummy2.mp4" type="video/mp4">
+    </video>
     <!-- About Section -->
     <section id="about">
         <div class="container">
-            <h2>About Me</h2>
-            <p>I’m a third-year Computer Engineering student who’s as comfortable with code as I am with color palettes. With a love for UI/UX design and frontend development, I’ve helped make my college’s periodicals, brochures, and web designs a little less boring. On the marketing side, I’ve led a team of 200 students and convinced big names like Pepsi, Nestlé, Shoppers Stop, etc. to invest in our ideas (or at least in our fests). When I’m not juggling academics and sponsorship drives, I’m diving into projects that range from frontend wizardry to machine learning and mobile app adventures.
+            <h1>About Me</h1>
+            <p class="About">I’m a third-year Computer Engineering student who’s as comfortable with code as I am with color palettes. With a love for UI/UX design and frontend development, I’ve helped make my college’s periodicals, brochures, and web designs a little less boring. On the marketing side, I’ve led a team of 200 students and convinced big names like Pepsi, Nestlé, Shoppers Stop, etc. to invest in our ideas (or at least in our fests). When I’m not juggling academics and sponsorship drives, I’m diving into projects that range from frontend wizardry to machine learning and mobile app adventures.
             </p>
         </div>
     </section>
+
+   <video autoplay muted loop id="myVideo3">
+        <source src="dummy5.mp4" type="video/mp4">
+    </video> 
+
+    
 
     <!-- Projects Section -->
     <section id="projects">
@@ -67,33 +78,61 @@
                     <p>Short description of the project.</p>
                     <a href="#">View Project</a>
                 </div>
-                <!-- Add more project cards as needed -->
+                <div class="project-card">
+                    <h3>Abhi Website Design</h3>
+                    <p>Short description of the project.</p>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>kabhi Website Design</h3>
+                    <p>Short description of the project.</p>
+                    <a href="#">View Project</a>
+                </div>
+                
             </div>
         </div>
     </section>
 
+    <canvas id="glcanvas"></canvas>
+    <div id="controlPanel">
+      <label>Color Flow <input type="range" min="0.1" max="2" step="0.01" value="1" id="colorSpeed" /></label>
+      <label>Ripple Strength <input type="range" min="0" max="1" step="0.01" value="0.5" id="rippleStrength" /></label>
+    </div>
+
     <!-- Skills Section -->
     <section id="skills">
-        <div class="container">
+    <div class="container">
             <h2>Skills</h2>
-            
-                HTML, CSS, JavaScript
-                React, Node.js
-                UI/UX Design
-                Others...
-        
-        </div>
+            <div class="icon-container">
+            <img class="icon-box" src="https://img.icons8.com/fluency/48/html-5.png" alt="html-5"/>
+            <img class="icon-box" src="https://img.icons8.com/color/48/css3.png" alt="css3"/>
+            <img class="icon-box" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1"/>
+            <img class="icon-box" src="https://img.icons8.com/office/48/react.png" alt="react"/>
+            <img class="icon-box" src="https://img.icons8.com/nolan/100/php-logo.png" alt="php-logo"/>
+            <img class="icon-box" src="https://img.icons8.com/color/48/figma--v1.png" alt="figma--v1"/>
+            <img class="icon-box" src="https://img.icons8.com/color/48/adobe-photoshop--v1.png" alt="adobe-photoshop--v1"/>
+            <img class="icon-box" src="https://img.icons8.com/color/48/c-programming.png" alt="c-programming"/>
+            <img class="icon-box" src="https://img.icons8.com/color/48/python--v1.png" alt="python--v1"/>
+            <img class="icon-box" src="https://img.icons8.com/color/48/flutter.png" alt="flutter"/>
+            <img class="icon-box" src="https://img.icons8.com/color/48/my-sql.png" alt="my-sql"/>
+            <img class="icon-box" src="https://img.icons8.com/ios-filled/48/github.png" alt="github"/>
+            </div>
+     </div>
     </section>
+
+    <video autoplay muted loop id="myVideo4">
+        <source src="dummy4.mp4" type="video/mp4">
+    </video> 
 
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <h2>Contact Me</h2>
-            <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
-                <input type="text" name="name" placeholder="Your Name" required><br></br>
-                <input type="email" name="email" placeholder="Your Email" required><br></br>
-                <textarea name="message" placeholder="Your Message" required></textarea><br></br>
-                <button type="submit">Send</button>
+            <h4>Contact Me</h4>
+            <form class="contact-form" action="mailto:rishichhadva31749@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required class="input-field small">
+                <input type="email" name="email" placeholder="Your Email" required class="input-field small"><br></br>
+                <textarea name="message" placeholder="Your Message" required class="input-field large"></textarea><br></br>
+                <button class="submit-btn"type="submit">Send</button>
             </form>
         </div>
     </section>
@@ -101,7 +140,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Rishi Shah. All rights reserved.</p>
+            <p id="footer">&copy; 2025 Rishi Shah. All rights reserved.</p>
         </div>
     </footer>
     <script src="script.js"></script>
