@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rishi Shah - Portfolio</title>
-    <link rel="stylesheet" href="web.css"> 
+    <link rel="stylesheet" href="styles.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
@@ -28,20 +28,20 @@
       
       <!-- Translucent vertical navbar -->
       <ul class="nav-links" id="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Skills">Skills</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Contact">Contact Me</a></li>
       </ul>
       
     <!-- Hero Section -->
-    <section id="hero">
+    <section id="Home">
         <div class="container" style= "padding: 40px 0px 0px 0px;" >
                 <h1>Hi, I'm Rishi Shah!</h1>
                 <h5>Creativity is my Craft.</h5>
-                <button ><a href="#contact" class="cta"><b>Get in Touch</b></a></button>
-                <button href=""class="cv"><b>Download My CV</b></button>
+                <button ><a href="#Contact" class="cta"><b>Get in Touch</b></a></button>
+               <a href="/Users/rishichhadva/Documents/Resume/Rishi Shah-Resume.pdf" download="Rishi Shah-Resume.pdf" target="_blank" class="cv" ><button><b>Download My CV</b></button></a>
         </div>
     </section>
 
@@ -49,7 +49,7 @@
         <source src="dummy2.mp4" type="video/mp4">
     </video>
     <!-- About Section -->
-    <section id="about">
+    <section id="About">
         <div class="container">
             <h1>About Me</h1>
             <p class="About">I’m a third-year Computer Engineering student who’s as comfortable with code as I am with color palettes. With a love for UI/UX design and frontend development, I’ve helped make my college’s periodicals, brochures, and web designs a little less boring. On the marketing side, I’ve led a team of 200 students and convinced big names like Pepsi, Nestlé, Shoppers Stop, etc. to invest in our ideas (or at least in our fests). When I’m not juggling academics and sponsorship drives, I’m diving into projects that range from frontend wizardry to machine learning and mobile app adventures.
@@ -62,9 +62,8 @@
     </video> 
 
     
-
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="Projects">
         <div class="container">
             <h2>Projects</h2>
             <div class="project-grid">
@@ -100,7 +99,7 @@
     </div>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="Skills">
     <div class="container">
             <h2>Skills</h2>
             <div class="icon-container">
@@ -125,10 +124,10 @@
     </video> 
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="Contact">
         <div class="container">
             <h4>Contact Me</h4>
-            <form class="contact-form" action="mailto:rishichhadva31749@gmail.com" method="post" enctype="text/plain">
+            <form class="contact-form" action="https://formspree.io/f/mgvkgpld" method="post" enctype="text/plain">
                 <input type="text" name="name" placeholder="Your Name" required class="input-field small">
                 <input type="email" name="email" placeholder="Your Email" required class="input-field small"><br></br>
                 <textarea name="message" placeholder="Your Message" required class="input-field large"></textarea><br></br>
