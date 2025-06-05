@@ -1,0 +1,367 @@
+
+/* Hide scrollbar and prevent scrolling while loading */
+body.loading {
+
+  overflow: hidden;
+  
+}
+
+/* Loader styling  */
+#loader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hide content initially */
+#content {
+  display: none;
+}
+
+body {
+    background-color: black;
+    cursor: default;
+}
+
+section.Home {
+   height: 100vh;
+}
+.navbar {
+    color: white;
+    width:1000px;
+    height: 70px;
+    flex-shrink: 0;  
+    border-radius: 0px 0px 8px 8px;
+    background: #1B1B1B;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    top: 0%;   
+    gap: 70px;
+    padding-left: 35px;
+    padding-right: 35px;
+    
+}
+
+ .navelements {
+    margin:auto;
+    color: #9C9C9C;
+    font-family: "IBM Plex Mono";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    gap: 10px;
+    text-decoration: none;
+    
+ }
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  text-decoration: none;
+}
+
+.icons {
+  width: 20px;
+  height: 20px;
+  color: #9C9C9C;
+  fill: currentColor;
+}
+
+ .Home h2 {
+    padding-top: 15%;
+    padding-left: 10%;
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 0px;
+ }
+
+ .Home p {
+    padding-top: 0;
+    padding-left: 10%;
+    width: 550px;
+    color: #9C9C9C;
+    font-family: "IBM Plex Mono";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: auto; /* 171.429% */
+    letter-spacing: 0;
+      word-break: normal;
+      overflow-wrap: normal;
+      hyphens: none;
+ }
+
+ .CV {
+   text-decoration:none;
+ }
+
+ .CVButton {
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  padding: 12px 32px; /* adjust if 21px 64px is too large */
+  margin-left: 10%;
+  margin-top: 20px;
+  gap: 10px;
+  border-radius: 4px;
+  border: 1px solid #62BA1B;
+  background: #3F8E00;
+  box-shadow: 0px 8px 30px 0px rgba(63, 142, 0, 0.50);
+  color: #FFF;
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content; /* ensure it doesn't stretch */
+}
+
+
+ .CVButton:hover {
+   text-decoration:none;
+   background: #244f00;
+   transform: scale(1.05);
+   box-shadow: 0px 8px 40px 5px rgba(63, 142, 0, 0.50);
+   
+ }
+
+ .circle-image {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;     /* makes it circular */
+    object-fit: cover;      /* crop/fit the image inside the circle */
+    position: absolute;
+    top: 26%;             /* adjust vertical position */
+    right: 10%            /* position it from the right edge */
+}
+
+.HomepageUpdate {
+   color: #3F8E00;
+   font-family: "IBM Plex Mono";
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 700;
+   text-decoration: none;
+   text-align: center;
+   margin-top: 13%;
+   overflow: hidden;
+   white-space: nowrap;
+   box-sizing: border-box;
+}
+
+.HomepageUpdate::after {
+  content: '';
+  animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0%   { content: ''; }
+  25%  { content: '.'; }
+  50%  { content: '..'; }
+  75%  { content: '...'; }
+  100% { content: ''; }
+}
+.titleicon {
+   margin-top: 50%;
+}
+.skilltitle {
+   display: grid;
+   grid-template-columns: repeat(2, auto);
+   gap: 10px;
+   width: fit-content;
+   align-items: center;
+   justify-self: center;
+
+}
+.skillstack {
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 0px;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.skills-header {
+   color: #3F8E00;
+   font-family: "IBM Plex Mono";
+   font-size: 24px;
+   font-style: normal;
+   font-weight: 700;
+   text-decoration: none;
+   margin-left: 3%;
+   line-height: 100px;
+   margin-bottom: 0;
+   padding-bottom: 0;
+   border: 0;
+}
+.icon-grid {
+   display: grid;
+   grid-template-columns: repeat(4, auto);
+   margin-left: 30%;
+   gap: 30px;
+   line-height: 0%;
+   padding-bottom: 20px;
+   margin-top: 0px;
+}
+
+.skill-item {
+   display: flex;
+   justify-content: start;
+   text-align: start;
+   gap:5px;
+   line-height: 0%;
+   transition: all 0.3s ease;
+   width: fit-content;
+}
+
+.skill-item:hover {
+   transform: scale(1.1);
+   cursor: default;
+}
+.skill-icon {
+   height:48px; width:48px;
+
+}
+
+.skill-text {
+   margin-top: 15px;
+   color: rgb(255, 255, 255);
+   font-family: Raleway;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 800;
+   line-height: normal;
+   text-transform: uppercase;
+    
+}
+
+.projecttitle {
+   display: grid;
+   grid-template-columns: repeat(2, auto);
+   gap: 10px;
+   width: fit-content;
+   align-items: center;
+   justify-self: center;
+
+}
+.projectheader {
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-top: 50px;
+
+}
+.Projects {
+   width: fit-content;
+   height: fit-content;
+   display: grid;
+   background-color: black;
+   border: 1px solid;
+   grid-template-columns: repeat(2, auto);
+   align-items: center;
+   justify-items: center;
+   margin: auto;
+}
+.ProjectA {
+   background-color: white;
+   height: 700px;
+   width: 600px;
+   margin: 10px;
+   text-align: center;
+   justify-content: center;
+   border-radius: 5px;
+}
+
+.Contact h4{
+   color: white;
+   font-family: Raleway;
+   font-size: 24px;
+   font-style: normal;
+   font-weight: 800;
+   line-height: normal;
+   text-align: center;
+   margin-bottom: 0;
+}
+
+.mymail {
+   color: #9C9C9C;
+   font-family: Anton;
+   font-size: 40px;
+   font-style: normal;
+   font-weight: 800;
+   line-height: normal;
+   text-align: center;
+   transition: all 0.5s ease;
+   margin-top: 10px;
+   width: fit-content;
+   justify-self: center;
+}
+
+.mymail:hover {
+   color: white;
+   transform: scale(1.1);
+}
+a{
+   text-decoration: none;
+}
+
+footer {
+   width: auto; height:100px;
+   background-color: #1B1B1B;
+   margin: 0%;
+   border: 0;
+}
+h5 {
+   color: white;
+   font-size: 20px;
+   font-family: "Roboto Flex";
+   font-weight: 100;
+   text-align: center;
+   padding-top: 40px;
+
+}
+footer a{
+   color: white;
+   
+}
