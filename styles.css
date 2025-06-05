@@ -304,15 +304,24 @@ section.Home {
    margin: auto;
 }
 .ProjectA {
+   
    background-color: white;
    height: 700px;
    width: 600px;
    margin: 10px;
-   text-align: center;
    justify-content: center;
    border-radius: 5px;
 }
-
+.ProjectContent {
+   color: #3F8E00;
+   font-family: "IBM Plex Mono";
+   font-size: 24px;
+   font-style: normal;
+   font-weight: 700;
+   text-decoration: none;
+   text-align: center;
+   margin-top: 330px;
+}
 .Contact h4{
    color: white;
    font-family: Raleway;
