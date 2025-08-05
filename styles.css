@@ -163,7 +163,7 @@ section.Home {
     object-fit: cover;      /* crop/fit the image inside the circle */
     position: absolute;
     top: 30%;             /* adjust vertical position */
-    right: 12%            /* position it from the right edge */
+    right: 15%            /* position it from the right edge */
 }
 
 .HomepageUpdate {
